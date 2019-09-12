@@ -1,0 +1,19 @@
+type AuctionCreated @entity {
+  id: ID!
+  tokenId: BigInt! # uint256
+  startingPrice: BigInt! # uint256
+  endingPrice: BigInt! # uint256
+  duration: BigInt! # uint256
+}
+
+type AuctionSuccessful @entity {
+  id: ID!
+  tokenId: BigInt! # uint256
+  totalPrice: BigInt! # uint256
+  winner: Bytes! # address
+}
+
+type AuctionCancelled @entity {
+  id: ID!
+  tokenId: BigInt! # uint256
+}
