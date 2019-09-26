@@ -4,6 +4,7 @@ type AuctionCreated @entity {
   startingPrice: BigInt! # uint256
   endingPrice: BigInt! # uint256
   duration: BigInt! # uint256
+  blockNumber: BigInt! # uint256
 }
 
 type AuctionSuccessful @entity {
@@ -11,9 +12,11 @@ type AuctionSuccessful @entity {
   tokenId: BigInt! # uint256
   totalPrice: BigInt! # uint256
   winner: Bytes! # address
+  blockNumber: BigInt! # uint256
 }
 
 type AuctionCancelled @entity {
   id: ID!
   tokenId: BigInt! # uint256
+  blockNumber: BigInt! # uint256
 }

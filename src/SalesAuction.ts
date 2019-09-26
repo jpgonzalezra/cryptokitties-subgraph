@@ -15,6 +15,7 @@ export function handleAuctionCreated(event: AuctionCreatedEvent): void {
   )
   entity.tokenId = event.params.tokenId
   entity.duration = event.params.duration
+  entity.blockNumber = event.block.number;
   entity.save()
 }
 
